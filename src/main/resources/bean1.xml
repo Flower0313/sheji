@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+        >
+    <!--配置User类对象的注册-->
+    <!--<bean id="user" class="com.holden.spring.bean.User" scope="prototype"></bean>-->
+    <!--使用set方法注入属性-->
+    <!--<bean id="book" class="com.holden.spring.bean.Book">
+        <property name="bname" value="金瓶梅"></property>
+        <property name="address">
+            &lt;!&ndash;属性默认null值&ndash;&gt;
+            &lt;!&ndash;<null/>&ndash;&gt;
+            &lt;!&ndash;属性为特殊符号&ndash;&gt;
+            <value><![CDATA[<<南京>>]]></value>
+
+        </property>
+    </bean>-->
+
+    <!--使用有参构造器注入-->
+    <!--<bean id="order" class="com.holden.spring.bean.Order">
+        <constructor-arg name="oname" value="flower"></constructor-arg>
+        &lt;!&ndash;<constructor-arg index="0" value="flower"></constructor-arg>&ndash;&gt;
+    </bean>-->
+    <!--引入外部属性文件-->
+    <!--<context:property-placeholder location="classpath:jdbc.properties"/>-->
+    <!--开启组件扫描,这里是扫描com.holden.spring下的所有包中的类-->
+    <context:component-scan base-package="com.holden.spring"></context:component-scan>
+
+    <!--配置连接池-->
+    <!--<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" >
+        <property name="driverClassName" value="${datasource.mysql.driverClassName}"></property>
+        <property name="url" value="${datasource.mysql.url}"></property>
+        <property name="username" value="${datasource.mysql.username}"></property>
+        <property name="password" value="${datasource.mysql.password}"></property>
+    </bean>-->
+
+</beans>
