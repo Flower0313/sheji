@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
  */
 
 @Configuration //将类转为配置类，用于替代xml文件
-@ComponentScan(basePackages = {"com.holden.spring"}) //组件扫描
+@ComponentScan(basePackages = {"com.holden.spring"}) //组件扫描,相当于<context:component-scan base-package="com.holden.spring">
 public class SpringConfig {
 
 
